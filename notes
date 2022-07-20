@@ -1,0 +1,19 @@
+mongodbde-->
+Collection=table
+documents=rows
+field=column
+command-->
+show dbs=show databases
+use xxxxxx = db oluşturmak için
+db.createCollection('xxxxxx')
+db.xxxxxx.find()=verileri getirir
+db.users.insertOne({name:'Arif', age:21, email:'blabla@gmail.com', gender:'F'})= tek bir row oluşturduk
+db.xxxxxx.limit(2)=ilk 2
+db.xxxxxx.skip(2)=ilk 2 geç
+db.createCollection('test', {capped:true,size:10000, max:15}) = mesela max 15 olduğu için 20 yazinca ilk 5i siliyor son 5i almal için
+db.xxxxxx.find({age: {$in: [4,17]}})=4 ve 17 olanlari  getirir
+db.xxxxxx.update({name:'arin'}),
+{name:'arif', age:14, gender:'M'},
+{upsert: false}= yanliş girdiysem insertleme
+db.xxxxxx.updateOne({name:arin},
+{$set: {age:30}})
